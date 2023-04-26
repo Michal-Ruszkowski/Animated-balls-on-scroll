@@ -49,6 +49,15 @@ body {
     }
 
     .circle__text {
-        margin-top:$size * .5
+        margin-top:$size * .5;
+        text-align: center;
+
+        @media (max-width:600px) {
+            font-size: 14px;
+            margin:0 10%
+        }
+        @media (max-width:450px) {
+            font-size: 12px;
+        }
     }
 }
