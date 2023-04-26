@@ -1,0 +1,54 @@
+$size: 20px;
+$color_main: #fff;
+
+@mixin flex {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing:border-box
+}
+
+body {
+    width:100vw;
+    overflow-x: hidden;
+    background-color: $color_main;
+}
+
+.text {
+    font-size: $size * 1.5;
+    text-align: center;
+    font-weight:bold;
+    margin:5vh 0
+}
+
+.circles {
+    margin:90vh 0;
+    @include flex;
+    flex-wrap:wrap;
+    width:100vw;
+    overflow-x: hidden;
+}
+
+.circle {
+    width:25vw;
+    height:25vw;
+    border-radius:50%;
+    margin:2vw;
+    background: $color_main;
+    background: radial-gradient(circle, $color_main 40%, darken($color_main, 30%) 100%);
+    @include flex;
+    flex-direction: column;
+
+    .circle__img {
+        width:50%
+    }
+
+    .circle__text {
+        margin-top:$size * .5
+    }
+}
